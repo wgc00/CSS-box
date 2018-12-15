@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+
+	#stage{
+		width:400px;
+		height:400px;
+		border:1px solid black;
+		perspective:1000px;
+		
+	}
+
+	#box{
+		position:relative;
+		width:200px;
+		height:200px;
+		margin:100px;
+		transform-style:preserve-3d;
+		transform:rotateX(-30deg) rotateY(30deg);
+		transition:transform 2s;
+	}
+
+	#box:hover{
+		transform:rotateX(-30deg) rotateY(30deg) rotateZ(180deg);
+	}
+	
+	#box > div{
+		position:absolute;
+		width:200px;
+		height:200px;
+		background-color:rgba(0,0,0,.1);
+		border:1px solid gray;
+		font-size:80px;
+		text-align:center;
+		line-height:200px;
+	}
+	
+	#front{
+		transform:translateZ(100px);
+	}
+
+	#back{
+		transform:translateZ(-100px) rotateY(180deg);
+	}
+	
+	#left{
+		transform:rotateY(-90deg) translateZ(100px);
+	}
+
+	#right{
+		transform:rotateY(90deg) translateZ(100px);
+	}
+
+	#top{
+		transform:rotateX(90deg) translateZ(100px);
+	}
+	
+	#bottom{
+		transform:rotateX(90deg) rotateY(180deg) translateZ(100px);
+	}	
+</style>
+</head>
+
+<body>
+
+<div id="stage">
+
+    <div id="box">
+        <div id="front">1</div>
+        <div id="back">2</div>
+        <div id="left">3</div>
+        <div id="right">4</div>
+        <div id="top">5</div>
+        <div id="bottom">6</div>     
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+	#stage{
+		width:200px;
+		height:100px;
+		margin:200px auto;
+		perspective:1000px;
+		
+	}
+
+	#imgBox{
+		position:relative;
+		width:200px;
+		height:100px;
+		transform-style:preserve-3d;
+		transition:transform 6s;
+	}
+	
+	#imgBox:hover{
+		transform:rotateY(360deg);
+	}
+	
+	#imgBox > img{
+		position:absolute;
+		width:200px;
+		height:100px;
+	}
+	
+	#imgBox > img:nth-child(1){
+		transform:rotateY(0deg) translateZ(300px);
+	}
+	
+	#imgBox > img:nth-child(2){
+		transform:rotateY(40deg) translateZ(300px);
+	}
+
+	#imgBox > img:nth-child(3){
+		transform:rotateY(320deg) translateZ(300px);
+	}
+
+	#imgBox > img:nth-child(4){
+		transform:rotateY(80deg) translateZ(300px);
+	}
+	
+	#imgBox > img:nth-child(5){
+		transform:rotateY(120deg) translateZ(300px);
+	}
+
+	#imgBox > img:nth-child(6){
+		transform:rotateY(160deg) translateZ(300px);
+	}		
+
+	#imgBox > img:nth-child(7){
+		transform:rotateY(200deg) translateZ(300px);
+	}		
+
+	#imgBox > img:nth-child(8){
+		transform:rotateY(240deg) translateZ(300px);
+	}		
+
+	#imgBox > img:nth-child(9){
+		transform:rotateY(280deg) translateZ(300px);
+	}						
+</style>
+</head>
+
+<body>
+
+<div id="stage">
+    <div id="imgBox">
+    	<img src="img/01.jpg" />
+        <img src="img/02.jpg" />
+        <img src="img/03.jpg" />
+    	<img src="img/01.jpg" />
+        <img src="img/02.jpg" />
+        <img src="img/03.jpg" />        
+    	<img src="img/01.jpg" />
+        <img src="img/02.jpg" />
+        <img src="img/03.jpg" /> 
+    </div>
+</div>
+
+</body>
+</html>
